@@ -1,0 +1,93 @@
+:root {
+    --main-color: #308cc3;
+    --second-color:#de398e;
+    --third-color:rgb(222, 215, 215);
+    --main-left:0;
+    --main-right:0;
+    --main-bottom:0;
+    --main-radius:50%;
+    --main-shadow:0 0 10px rgba(0, 0, 0, .4);
+  }
+
+* {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    background: var(--main-color);
+    display: flex;
+    align-items: center;/* centrer verticalement   */
+    justify-content: center;/*centrer horizontalement    */
+    height: 100vh;
+}
+
+.clock {
+    background: var(--third-color);
+    border: 5px solid var(--second-color);
+    border-radius: var(--main-radius);  
+}
+
+.wrap {
+    width: 350px;
+    height: 350px;
+    position: relative;
+}
+
+.hour {
+    position: absolute;
+    height: 100px;
+    width: 6px;
+    background: var(--main-color);
+    margin: auto;
+    top: -27%;
+    left: var(--main-left);
+    bottom: var(--main-bottom);
+    right: var(--main-right);
+    transform-origin:bottom center;
+    transform: rotate(0deg);
+    box-shadow: var(--main-shadow);
+}
+
+.minute {
+    margin: auto;
+    position:absolute;
+    background: var(--main-color);
+    height: 130px;
+    width: 4px;
+    top: -38%;
+    left: var(--main-left);
+    bottom: var(--main-bottom);
+    right: var(--main-right);
+    transform: rotate(90deg);
+    transform-origin:bottom center;
+    box-shadow: var(--main-shadow);
+}
+
+.seconde {
+    position: absolute;
+    margin: auto;
+    height: 90px;
+    width: 2px;
+    left:var(--main-left);
+    right:var(--main-right);
+    bottom: var(--main-bottom);
+    top:-26%;
+    background: var(--second-color);
+    transform-origin: bottom center;
+    transform: rotate(180deg);
+}
+
+.point {
+    position: absolute;
+    margin: auto;
+    border: 2px solid var(--main-color);
+    border-radius: var(--main-radius);
+    top:0;
+    left:var(--main-left);
+    bottom: var(--main-bottom);
+    right: var(--main-right);
+    width: 12px;
+    height: 12px;
+    background: var(--second-color);
+}
